@@ -36,9 +36,8 @@ public class CustomerController {
 
     @PutMapping("/updateCustomer")
     public String updateCustomer(@RequestBody Customer customer){
-        System.out.println();
         customerService.updateCustomer(customer);
-        return "\"update customer er kaldt\" + customer.getId() + \" \" + customer.getAge() + \" \" + customer.getName()";
+        return "Customer updated";
     }
 
     /*@PostMapping("/updateCustomer")
