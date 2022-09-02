@@ -35,7 +35,7 @@ public class CustomerController {
 
 
     @PostMapping("/updateCustomer")
-    public String updateCustomer(Customer customer){
+    public String updateCustomer(@RequestBody Customer customer){
         customerService.updateCustomer(customer);
         return "Customer updated";
     }
