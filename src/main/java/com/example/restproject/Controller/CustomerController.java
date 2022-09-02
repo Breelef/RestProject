@@ -23,7 +23,7 @@ public class CustomerController {
 
     }
     @PostMapping("/addCustomer")
-    public ResponseEntity<String> addCustomer(Customer customer){
+    public ResponseEntity<String> addCustomer(@RequestBody Customer customer){
         customerService.save(customer);
         return new ResponseEntity<>("Customer added to DB", HttpStatus.OK);
     }
