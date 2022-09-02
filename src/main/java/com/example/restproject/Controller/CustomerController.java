@@ -39,6 +39,7 @@ public class CustomerController {
         customerService.updateCustomer(customer);
         return "Customer updated";
     }
+
     /*@PostMapping("/updateCustomer")
     public ResponseEntity<String> updateById(Customer update){
         Optional<Customer> customer = customerService.findById(update.getId());
