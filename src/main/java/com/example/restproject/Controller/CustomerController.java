@@ -34,10 +34,10 @@ public class CustomerController {
     }
 
 
-    @PostMapping("/updateCustomer")
-    public String updateCustomer(@RequestBody Customer customer){
+    @PutMapping("/updateCustomer")
+    public ResponseEntity<String> updateCustomer(@RequestBody Customer customer){
         customerService.updateCustomer(customer);
-        return "Customer updated";
+        return new ResponseEntity<>("Customer added to DB", HttpStatus.OK);
     }
 
     /*@PostMapping("/updateCustomer")
