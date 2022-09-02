@@ -40,8 +40,7 @@ public class CustomerService implements CustomerServiceInterface {
     public Optional<Customer> findById(Long aLong) {
         return repo.findById(aLong);
     }
-    public String updateCustomer(Customer customer){
+    public void updateCustomer(Customer customer){
         repo.save(customer);
-        return "User Updated";
     }
 }
