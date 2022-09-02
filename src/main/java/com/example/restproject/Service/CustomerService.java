@@ -41,7 +41,6 @@ public class CustomerService implements CustomerServiceInterface {
         return repo.findById(aLong);
     }
     public void updateCustomer(Customer customer){
-        System.out.println("update customer er kaldt" + customer.getId() + " " + customer.getAge() + " " + customer.getName());
         repo.save(customer);
     }
 }
