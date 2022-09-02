@@ -23,9 +23,9 @@ public class CustomerController {
 
     }
     @PostMapping("/addCustomer")
-    public ResponseEntity<String> addCustomer(@RequestBody Customer customer){
+    public ResponseEntity<Customer> addCustomer(@RequestBody Customer customer){
         customerService.save(customer);
-        return new ResponseEntity<>("Customer added to DB", HttpStatus.OK);
+        return new ResponseEntity<>(customer, HttpStatus.OK);
     }
 
     @GetMapping("/findUserById")
