@@ -37,7 +37,7 @@ public class CustomerController {
     @PutMapping("/updateCustomer")
     public ResponseEntity<String> updateCustomer(@RequestBody Customer customer){
         customerService.updateCustomer(customer);
-        return new ResponseEntity<>("Customer added to DB", HttpStatus.OK);
+        return new ResponseEntity<>("Customer updated to DB", HttpStatus.OK);
     }
 
     /*@PostMapping("/updateCustomer")
