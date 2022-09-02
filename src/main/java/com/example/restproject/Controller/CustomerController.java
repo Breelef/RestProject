@@ -33,11 +33,14 @@ public class CustomerController {
         return new ResponseEntity<>(customerService.findById(id), HttpStatus.OK);
     }
 
-
     @PutMapping("/updateCustomer")
     public ResponseEntity<String> updateCustomer(@RequestBody Customer customer){
-        customerService.updateCustomer(customer);
-        return new ResponseEntity<>("Customer updated to DB", HttpStatus.OK);
+        if(customerService.findById(customer.getId()).isPresent()) {
+            customerService.save(customer);
+            return new ResponseEntity<>("Customer updated to DB", HttpStatus.OK);
+        }else{
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
     /*@PostMapping("/updateCustomer")
