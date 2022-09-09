@@ -11,7 +11,7 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    private Date dateStart;
+    private java.sql.Date dateStart;
     @OneToMany(mappedBy = "course")
     private Set<Customer> customerList;
 
