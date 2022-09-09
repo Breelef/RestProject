@@ -3,7 +3,6 @@ package com.example.restproject.Model;
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.*;
-import com.example.restproject.Model.Customer;
 
 @Entity
 @Table(name="Courses")
