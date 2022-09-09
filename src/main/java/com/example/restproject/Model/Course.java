@@ -50,4 +50,5 @@ public class Course {
     public void setCustomerList(Set<Customer> customerList) {
         this.customerList = customerList;
     }
+
 }
