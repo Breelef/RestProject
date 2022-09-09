@@ -35,7 +35,7 @@ public class CourseController {
     public ResponseEntity<String> updateCustomer(@RequestBody Course course){
         if(courseService.findById(course.getId()).isPresent()) {
             courseService.save(course);
-            return new ResponseEntity<>("Customer updated to DB", HttpStatus.OK);
+            return new ResponseEntity<>("Course updated to DB", HttpStatus.OK);
         }else{
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

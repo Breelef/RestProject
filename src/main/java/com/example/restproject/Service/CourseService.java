@@ -10,6 +10,11 @@ import java.util.Set;
 @Service
 public class CourseService implements CourseServiceInterface{
     private CourseRepoInterface repo;
+
+    public CourseService(CourseRepoInterface repo) {
+        this.repo = repo;
+    }
+
     @Override
     public Set<Course> findAll() {
         Set <Course> set = new HashSet<>();
