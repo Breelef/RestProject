@@ -23,8 +23,8 @@ public class CourseController {
         courseService.save(course);
         return new ResponseEntity<>(course, HttpStatus.OK);
     }
-    @GetMapping("/getCourses")
-    public ResponseEntity<Set<Course>> getCourses(){
+    @GetMapping("/showCourses")
+    public ResponseEntity<Set<Course>> showCourses(){
         return new ResponseEntity<>(courseService.findAll(), HttpStatus.OK);
     }
     @GetMapping("/findCourseById")
