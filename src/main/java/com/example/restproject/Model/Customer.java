@@ -14,6 +14,9 @@ public class Customer {
 
     @Column(name="Age")
     private int age;
+    @ManyToOne
+    @JoinColumn(name = "course")
+    private Course course;
 
     public Customer(){
     }
