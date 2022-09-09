@@ -19,7 +19,7 @@ public class CourseController {
     }
 
     @PostMapping("/addCourse")
-    public ResponseEntity<Course> addCourse(@RequestBody Course course){
+    public ResponseEntity<Course> addCourse(Course course){
         courseService.save(course);
         return new ResponseEntity<>(course, HttpStatus.OK);
     }
@@ -32,7 +32,7 @@ public class CourseController {
         return new ResponseEntity<>(courseService.findById(id), HttpStatus.OK);
     }
     @PutMapping("/updateCourse")
-    public ResponseEntity<String> updateCustomer(@RequestBody Course course){
+    public ResponseEntity<String> updateCourse(@RequestBody Course course){
         if(courseService.findById(course.getId()).isPresent()) {
             courseService.save(course);
             return new ResponseEntity<>("Course updated to DB", HttpStatus.OK);
